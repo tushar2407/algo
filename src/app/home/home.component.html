@@ -1,6 +1,10 @@
 <p>home works!</p>
 <ul>
     <li *ngFor="let i of list">
-        {{i}}
+        <div>
+            {{i}}
+        </div>
     </li>
 </ul>
+<button mat-button (click)="bubbleSort()">Sort</button>
+<button mat-button (click)="insertionSort()">Sort</button>
