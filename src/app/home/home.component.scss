@@ -1,6 +1,5 @@
 div{
     height: 30px;
-    width: 30px;
     padding: 5px;
     text-align: center;
     justify-content: center;
@@ -13,7 +12,7 @@ ul{
     list-style: none;
 }
 .red{
-    background-color: red;
+    background-color: red !important;
 }
 .green{
     background-color: green !important;

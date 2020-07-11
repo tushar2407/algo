@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   k=0;
   len;
   key;
+  time;
   @ViewChild('ba') ba:ElementRef;
   @ViewChildren('av') av:QueryList<ElementRef>;
   @ViewChild('h3') h3:ElementRef;
@@ -25,11 +26,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.list = [];
-    for(var i =0 ;i<=3;i++){
-      this.list.push(Math.floor(Math.random()*10+1));
+    for(var i =0 ;i<=10;i++){
+      this.list.push(Math.floor(Math.random()*100+1));
     }
     this.len=this.list.length;
     this.key=this.list[1];
+    this.time=300;
   }
   ngAfterViewInit(){
     console.log(this.ba.nativeElement);
@@ -82,13 +84,22 @@ export class HomeComponent implements OnInit {
       this.array[this.i].nativeElement.classList.remove('red');
     }
     this.i++;
-    setTimeout(this.bubbleSort,300);
+    setTimeout(this.bubbleSort,this.time);
   };
+  reset(){
+    this.list = [];
+    for(var i =0 ;i<=10;i++){
+      this.list.push(Math.floor(Math.random()*10+1));
+    }
+    this.len=this.list.length;
+    this.key=this.list[1];
+  }
   insertionSort=()=>{
-    var element=document.getElementsByTagName('div');
     if(this.i==this.list.length){
-      for(var o=0;o<element.length;o++)
-        element[o].setAttribute("style","background-color:green");
+      this.h3.nativeElement.classList.remove('none');
+      this.h3.nativeElement.classList.add('displayDiv');
+      this.h4.nativeElement.classList.remove('displayDiv');
+      this.h4.nativeElement.classList.add('none');
       return;
     }
     if(this.k>=0 && this.list[this.k]>this.key){
@@ -97,17 +108,17 @@ export class HomeComponent implements OnInit {
     }
     else {
       this.list[this.k+1]=this.key;
+      this.array[this.i].nativeElement.classList.remove('red');
+      this.array[this.i].nativeElement.classList.add('green');
       this.i++;
-      if(this.i==this.list.length){
-        for(var o=0;o<this.list.length;o++)
-          element[o].setAttribute("style","background-color:green");
-        return;
-      }
+      if(this.i<this.list.length)
+        this.array[this.i].nativeElement.classList.add('red');
       this.k=this.i-1;
       this.key=this.list[this.i];
-      console.log(parseInt(element[this.i].innerHTML)==4 );
-      element[this.i].setAttribute("style","background-color:red;");
     }
-    setTimeout(this.insertionSort,1000);
+    setTimeout(this.insertionSort,this.time);
   };
+  speed(a){
+    this.time=300*a;
+  }
 }

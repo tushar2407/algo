@@ -1,12 +1,18 @@
-<p>home works!</p>
+<h1>Sorting Algorithms </h1>
 <ul #ba>
     <li *ngFor="let i of list">
-        <div #av>
+        <div [style.width.px]="i*10" #av  >
             {{i}}
         </div>
     </li>
 </ul>
 <button mat-button (click)="bubbleUtil()">Bubble Sort</button>
 <button mat-button (click)="insertionUtil()">Insertion Sort</button>
+<button mat-button (click)="reset()">Reset</button>
 <h3 class="none" #h3>Sorted</h3>
-<h4 class="none" #h4>{{key}}</h4>
+<h4 class="none" #h4>Key : {{key}}</h4>
+<button mat-button (click)="speed(0.25)">x0.25</button>
+<button mat-button (click)="speed(0.25)">x0.50</button>
+<button mat-button (click)="speed(0.25)">x0.75</button>
+<button mat-button (click)="speed(0.25)">x1</button>
+<button mat-button (click)="speed(0.25)">x2</button>
