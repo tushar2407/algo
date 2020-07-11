@@ -35,10 +35,6 @@ export class HomeComponent implements OnInit {
   }
   ngAfterViewInit(){
     console.log(this.ba.nativeElement);
-    // this.av.nativeElement[0].classList.add('red');
-    // console.log(this.av.nativeElement[0].classList);
-    // this.av.nativeElement.classList.remove('blue');
-    // console.log(this.av.nativeElement.classList);
     console.log(this.av);
     this.array=this.av.toArray();
     console.log(this.array[0].nativeElement.classList);

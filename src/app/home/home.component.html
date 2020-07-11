@@ -9,10 +9,10 @@
 <button mat-button (click)="bubbleUtil()">Bubble Sort</button>
 <button mat-button (click)="insertionUtil()">Insertion Sort</button>
 <button mat-button (click)="reset()">Reset</button>
+<button mat-button (click)="speed(4)">x0.25</button>
+<button mat-button (click)="speed(2)">x0.50</button>
+<button mat-button (click)="speed(4/3)">x0.75</button>
+<button mat-button (click)="speed(1)">x1</button>
+<button mat-button (click)="speed(0.5)">x2</button>
 <h3 class="none" #h3>Sorted</h3>
 <h4 class="none" #h4>Key : {{key}}</h4>
-<button mat-button (click)="speed(0.25)">x0.25</button>
-<button mat-button (click)="speed(0.25)">x0.50</button>
-<button mat-button (click)="speed(0.25)">x0.75</button>
-<button mat-button (click)="speed(0.25)">x1</button>
-<button mat-button (click)="speed(0.25)">x2</button>

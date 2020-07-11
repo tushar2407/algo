@@ -1,0 +1,8 @@
+<div class="container">
+<div class="row">
+    <div class ="col1 col-md-1" *ngFor="let i of list" #blocks (click)="mark(i)">
+        <p *ngIf="i==0">Start</p>
+        <p *ngIf="i==2">end</p>
+    </div>
+</div>
+</div>
