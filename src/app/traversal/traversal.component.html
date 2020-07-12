@@ -1,7 +1,20 @@
-<div class="container">
+<div class="container" >
+    <h3>Breadth First Search</h3>
+    <h6>Rules :</h6>
+    <ul>
+        <li>Your <b>source</b> is the First Box marked in <b>Green</b>. </li>
+        <li>Your <b>destination</b> is the Last Box marked in <b>Red</b>. </li>
+        <li><b>Click</b> on any box to <b>Block</b> your way to the destination. </li>
+        <li><b>Click</b> on the same box to <b>Bridge</b> the way. </li>
+        <li>The <b>Distance</b> is initialized with <b>MAX_VALUE</b>. </li>
+        <li>If the <b>Final distance</b> is the <b>MAX_VALUE</b> that means the destination is <b>not</b> reachable.</li>
+    </ul>
+    
     <div class="row" *ngFor="let i of list" >
         <div class="col1" *ngFor="let j of i " #blocks (click)="block(i,j)">
         </div>
     </div>
-<button (click)="searchUtil()" mat-button>Search</button>
+    
+<button (click)="searchUtil()" mat-button style="margin: 10px;">Search</button>
+<h4 > Distance: {{distance}} </h4>
 </div>

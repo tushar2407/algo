@@ -1,18 +1,31 @@
-<h1>Sorting Algorithms </h1>
-<ul #ba>
-    <li *ngFor="let i of list">
-        <div [style.width.px]="i*10" #av  >
-            {{i}}
-        </div>
-    </li>
-</ul>
-<button mat-button (click)="bubbleUtil()">Bubble Sort</button>
-<button mat-button (click)="insertionUtil()">Insertion Sort</button>
-<button mat-button (click)="reset()">Reset</button>
-<button mat-button (click)="speed(4)">x0.25</button>
-<button mat-button (click)="speed(2)">x0.50</button>
-<button mat-button (click)="speed(4/3)">x0.75</button>
-<button mat-button (click)="speed(1)">x1</button>
-<button mat-button (click)="speed(0.5)">x2</button>
-<h3 class="none" #h3>Sorted</h3>
-<h4 class="none" #h4>Key : <div [style.width.px]='key*10'>{{key}}</div></h4>
+<div class="container">
+    <h1>Sorting Algorithms </h1>
+    <h6>Rules :</h6>
+    <ul style="list-style: circle;">
+        <li> The visulaization shows you <b>Insertion Sort</b> or <b>Bubble sort</b> depending on the option your choose below.</li>
+        <li> You can change the speed of the same as per your convenience.</li>
+        <li> You will be shown the key chosen in the <b>Insertion Sort</b></li>
+        <li> Click on the <b>Reset</b> button to get a <b>new</b> set of array to sort.</li>
+    </ul>
+    <ul #ba>
+        <li *ngFor="let i of list">
+            <div [style.width.px]="i*15" #av  class="div">
+                {{i}}
+            </div>
+        </li>
+    </ul>
+    <button mat-button (click)="bubbleUtil()">Bubble Sort</button>
+    <button mat-button (click)="insertionUtil()">Insertion Sort</button>
+    <button mat-button (click)="reset()">Reset</button>
+    <div style="margin: 10px;">
+        <h5>Adjust your speed :</h5>
+        <button mat-button (click)="speed(4)">x0.25</button>
+        <button mat-button (click)="speed(2)">x0.50</button>
+        <button mat-button (click)="speed(4/3)">x0.75</button>
+        <button mat-button (click)="speed(1)">x1</button>
+        <button mat-button (click)="speed(0.5)">x2</button>
+    
+    </div>
+    <h3 class="none" #h3>Sorted</h3>
+    <h4 class="none" #h4>Key : <div [style.width.px]='key*15' class="div">{{key}}</div></h4>
+</div>

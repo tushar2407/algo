@@ -43,7 +43,7 @@ export class TraversalComponent implements OnInit {
     this.array=this.blocks.toArray();
     this.array[0].nativeElement.classList.add('green');
     this.array[624].nativeElement.classList.add('red');
-    console.log(this.array);
+    // console.log(this.array);
   }
   block(i,j){
     // console.log(i);
@@ -91,15 +91,12 @@ export class TraversalComponent implements OnInit {
   }
   search=()=>{
       if(this.list[24][24].visited){
-        console.log("mai yahan hu saale");
-        console.log(this.distance);
-        // return this.visited[24][24].distance;
+        // console.log("mai yahan hu saale");
+        // console.log(this.distance);
         return;
       }
-
-      console.log(this);
       if(this.queue.length>0){
-        console.log("asdas");
+        // console.log("asdas");
         var temp1=this.queue[0];
         this.queue.splice(0,1);
         // console.log(queue);

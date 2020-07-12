@@ -1,8 +1,4 @@
 import { Component, OnInit, ElementRef, ViewChildren , ViewChild, QueryList} from '@angular/core';
-import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
-import { timer } from 'rxjs';
-import { ConstantPool } from '@angular/compiler';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -27,17 +23,22 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.list = [];
     for(var i =0 ;i<=10;i++){
-      this.list.push(Math.floor(Math.random()*100+1));
+      var temp=Math.floor(Math.random()*100+1);
+      if(temp===1){
+        i--;
+        continue;
+      }
+      this.list.push(temp);
     }
     this.len=this.list.length;
     this.key=this.list[1];
     this.time=300;
   }
   ngAfterViewInit(){
-    console.log(this.ba.nativeElement);
-    console.log(this.av);
+    // console.log(this.ba.nativeElement);
+    // console.log(this.av);
     this.array=this.av.toArray();
-    console.log(this.array[0].nativeElement.classList);
+    // console.log(this.array[0].nativeElement.classList);
   }
   bubbleUtil=()=>{
     this.i=0;
@@ -87,6 +88,10 @@ export class HomeComponent implements OnInit {
     for(var i =0 ;i<=10;i++){
       this.list.push(Math.floor(Math.random()*10+1));
     }
+    this.h4.nativeElement.classList.add('none');
+    this.h4.nativeElement.classList.remove('displayDiv');
+    this.h3.nativeElement.classList.add('none');
+    this.h3.nativeElement.classList.remove('displayDiv');
     this.len=this.list.length;
     this.key=this.list[1];
   }
@@ -96,6 +101,10 @@ export class HomeComponent implements OnInit {
       this.h3.nativeElement.classList.add('displayDiv');
       this.h4.nativeElement.classList.remove('displayDiv');
       this.h4.nativeElement.classList.add('none');
+      for( var r=0;r<this.array.length;r++){
+        this.array[r].nativeElement.classList.remove('red');
+        this.array[r].nativeElement.classList.add('green');
+      }
       return;
     }
     if(this.k>=0 && this.list[this.k]>this.key){

@@ -1,4 +1,4 @@
-div{
+.div{
     height: 30px;
     padding: 5px;
     text-align: center;
@@ -7,6 +7,9 @@ div{
     color: white;
     border-radius: 5px;
     margin: 5px;
+}
+h1{
+    background-color: none;
 }
 ul{
     list-style: none;
@@ -22,4 +25,7 @@ ul{
 }
 .displayDiv{
     display: block;
+}
+.container{
+    margin: 50px;
 }

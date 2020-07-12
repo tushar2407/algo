@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@media(max-width:1000px){
+    app-root{
+        display: none;
+    }
+    body{
+        background-color: lightblue ;
+    }
+}
+@media(min-width:1001px){
+    .noDispaly{
+        display: none;
+    }
+}
+body{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
