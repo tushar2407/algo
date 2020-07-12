@@ -4,10 +4,12 @@
     padding: 5px;
     color: white;
     border-radius: 5px;
-    margin: 5px;
-    width:20px;
+    margin:1px;
+    width:30px;
 }
-
+.col1:hover{
+    cursor: grab;
+}
 .red{
     background-color:red !important;
 }
@@ -15,5 +17,9 @@
     background-color: green !important;
 }
 .white{
-    background-color: white;
+    background-color: white !important;
+}
+.container{
+    margin-bottom: 50px;
+    margin-top: 50px;
 }

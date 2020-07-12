@@ -15,4 +15,4 @@
 <button mat-button (click)="speed(1)">x1</button>
 <button mat-button (click)="speed(0.5)">x2</button>
 <h3 class="none" #h3>Sorted</h3>
-<h4 class="none" #h4>Key : {{key}}</h4>
+<h4 class="none" #h4>Key : <div [style.width.px]='key*10'>{{key}}</div></h4>
