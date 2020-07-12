@@ -1,6 +1,7 @@
 <div class="container">
-<div class="row" *ngFor="let i of list" >
-    <div class="col1" *ngFor="let j of i " #blocks (click)="block(i,j)">
+    <div class="row" *ngFor="let i of list" >
+        <div class="col1" *ngFor="let j of i " #blocks (click)="block(i,j)">
+        </div>
     </div>
-</div>
+<button (click)="searchUtil()" mat-button>Search</button>
 </div>
