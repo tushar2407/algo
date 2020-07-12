@@ -6,12 +6,22 @@
     body{
         background-color: lightblue ;
     }
+    
 }
 @media(min-width:1001px){
-    .noDispaly{
+    .noDisplay{
         display: none;
+    }
+    body{
+        background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
     }
 }
 body{
-    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    min-height: 100vh;
+}
+.footer{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
 }
